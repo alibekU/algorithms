@@ -52,7 +52,7 @@ int KMP_search(string text, string pattern){
  */
 vector<int> KMP_table(string pattern){
     vector<int> T(pattern.length()-1);
-    T[0] = 0;
+    T.push_back(0);
     // pos  - index for T[], end of suffix, current element
     // m - end of prefix in 'pattern'
     int pos = 1, m = 0;
