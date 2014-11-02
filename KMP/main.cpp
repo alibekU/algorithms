@@ -11,7 +11,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     string text = "acaaacacacdeacacdde";
-    string pattern = "acacde";
-    cout << KMP_search(text, pattern)<<endl;
+    string pattern = "cac";
+    cout << KMP_count(text, pattern)<<endl;
     return 0;
 }

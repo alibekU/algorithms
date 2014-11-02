@@ -39,6 +39,24 @@ int KMP_search(string text, string pattern){
     }
     return -1;
 }
+/*
+ KMP_count
+ return number of occurences of 'pattern'
+ in 'text' with overplaps permitted.
+ */
+int KMP_count(string text, string pattern){
+    int count = 0, pos = 0, temp = 0;
+    
+    while(pos < text.length()){
+        temp = KMP_search(text.substr(pos), pattern);
+        if (temp == -1) {
+            break;
+        }
+        pos += temp +1;
+        count++;
+    }
+    return  count;
+}
 
 /*
  KMP_table
