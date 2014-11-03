@@ -17,6 +17,7 @@
 using namespace std;
 
 vector<int> KMP_table(string);
+vector<int> KMP_search_all(string text, string pattern);
 int KMP_search(string text, string pattern);
 int KMP_count(string text, string pattern);
 

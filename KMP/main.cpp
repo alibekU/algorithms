@@ -10,8 +10,12 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    string text = "acaaacacacdeacacdde";
-    string pattern = "cac";
-    cout << KMP_count(text, pattern)<<endl;
+    string text = "GATATATGCATATACTT";
+    string pattern = "ATAT";
+    vector<int> res = KMP_search_all(text, pattern);
+    for(int x:res){
+        cout<<x<<" ";
+    }
+    cout<<endl;
     return 0;
 }

@@ -58,6 +58,21 @@ int KMP_count(string text, string pattern){
     return  count;
 }
 
+vector<int> KMP_search_all(string text, string pattern){
+    vector<int> result;
+    int pos = 0, temp = 0;
+    while(pos < text.length()){
+        temp = KMP_search(text.substr(pos), pattern);
+        if (temp == -1) {
+            break;
+        }
+        pos += temp;
+        result.push_back(pos);
+        pos ++;
+    }
+    return result;
+}
+
 /*
  KMP_table
  returns a vector T such that
